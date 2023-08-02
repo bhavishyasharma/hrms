@@ -78,6 +78,7 @@ class SalarySlip(TransactionBase):
 			"get_last_day": get_last_day,
 			"ceil": ceil,
 			"floor": floor,
+			"min": min,
 		}
 
 	def autoname(self):
