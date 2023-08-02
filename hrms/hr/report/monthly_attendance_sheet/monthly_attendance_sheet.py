@@ -233,8 +233,9 @@ def get_attendance_map(filters: Filters) -> Dict:
 			attendance_map.setdefault(employee, {}).setdefault(None, {})
 
 		for day in leave_days:
-			for shift in attendance_map[employee].keys():
-				attendance_map[employee][shift][day] = "On Leave"
+			if employee in attendance_map:
+				for shift in attendance_map[employee].keys():
+					attendance_map[employee][shift][day] = "On Leave"
 
 	return attendance_map
 

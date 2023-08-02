@@ -68,6 +68,7 @@ class SalarySlip(TransactionBase):
 			"getdate": getdate,
 			"ceil": ceil,
 			"floor": floor,
+			"min": min,
 		}
 
 	def autoname(self):
